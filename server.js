@@ -1,30 +1,36 @@
-/* ******************************************
- * This server.js file is the primary file of the 
- * application. It is used to control the project.
- *******************************************/
-/* ***********************
- * Require Statements
- *************************/
-const express = require("express")
-const env = require("dotenv").config()
-const app = express()
-const static = require("./routes/static")
+const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
+const dotenv = require('dotenv');
 
-/* ***********************
- * Routes
- *************************/
-app.use(static)
+// Load environment variables from .env file
+dotenv.config();
 
-/* ***********************
- * Local Server Information
- * Values from .env (environment) file
- *************************/
-const port = process.env.PORT
-const host = process.env.HOST
+const app = express();
+const port = process.env.PORT || 3000;
 
-/* ***********************
- * Log statement to confirm server operation
- *************************/
+// Set the view engine to EJS
+app.set('view engine', 'ejs');
+
+// Use expressLayouts middleware
+app.use(expressLayouts);
+
+// Set the layout file for EJS (optional)
+app.set('layout', 'layouts/layout');
+
+// Serve static files from the "public" directory
+app.use(express.static('public'));
+
+// Define routes
+app.get('/', (req, res) => {
+  res.render('index', { title: 'PHP Motors' });
+});
+
+// Define a 404 route (optional)
+app.use((req, res) => {
+  res.status(404).render('404', { title: 'Page Not Found' });
+});
+
+// Start the server
 app.listen(port, () => {
-  console.log(`app listening on ${host}:${port}`)
-})
+  console.log(`Server is running on port ${port}`);
+});
