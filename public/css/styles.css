@@ -1,3 +1,14 @@
+/* Define color scheme */
+:root {
+  --prmary-bg-color: #bababa;
+  --scondary-bg-color: #8d8d8d;
+  --link-color: #a6cbeb;
+  --accent-color: #4c96dbeb;
+  --text-color: #3a3a3a;
+  --white-color: #ffffff;
+
+}
+
 /******* Change Box Model ***************/
 *,
 *:before,
