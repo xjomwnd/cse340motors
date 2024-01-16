@@ -1,12 +1,13 @@
+/* styles.css */
+
 /* Define color scheme */
 :root {
-  --prmary-bg-color: #bababa;
-  --scondary-bg-color: #8d8d8d;
+  --primary-bg-color: #bababa;
+  --secondary-bg-color: #8d8d8d;
   --link-color: #a6cbeb;
   --accent-color: #4c96dbeb;
   --text-color: #3a3a3a;
   --white-color: #ffffff;
-
 }
 
 body {
@@ -16,13 +17,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/******* Change Box Model ***************/
+/* Change Box Model */
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
-/* styles.css */
 
 /* Reset some default styles */
 body, h1, h2, h3, p, ul, li {
@@ -30,21 +30,19 @@ body, h1, h2, h3, p, ul, li {
   padding: 0;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-}
-
 /* Header styles */
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--primary-bg-color);
+  color: var(--white-color);
   text-align: center;
   padding: 10px;
 }
+
 header img {
   max-width: 100%;
   height: auto;
 }
+
 .logo picture {
   list-style: none;
 }
@@ -55,12 +53,12 @@ header h1 {
 
 /* Navigation styles */
 nav {
-  background-color: #444;
+  background-color: var(--secondary-bg-color);
   padding: 10px;
 }
 
 nav a {
-  color: #fff;
+  color: var(--white-color);
   text-decoration: none;
   margin-right: 20px;
   font-weight: bold;
@@ -69,16 +67,16 @@ nav a {
 /* Main content styles */
 main {
   max-width: 800px;
-  margin: 20px;
-  background-color: #fff;
+  margin: 20px auto;
+  background-color: var(--white-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
 /* Footer styles */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--primary-bg-color);
+  color: var(--white-color);
   text-align: center;
   padding: 10px;
   position: fixed;
@@ -90,15 +88,15 @@ footer {
 @media only screen and (min-width: 600px) {
   /* Add responsive styles for larger screens here */
   body {
-      background-color: #f4f4f4;
+    background-color: var(--primary-bg-color);
   }
 
   main {
-      max-width: 800px;
-      margin: 0 auto;
+    max-width: 800px;
+    margin: 20px auto;
   }
 
   footer {
-      position: relative;
+    position: relative;
   }
 }
