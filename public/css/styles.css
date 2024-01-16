@@ -100,3 +100,28 @@ footer {
     position: relative;
   }
 }
+
+/* public/css/styles.css */
+
+/* General styles for all screen sizes */
+main {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles for medium-sized screens (600px to 799px) */
+@media only screen and (min-width: 600px) and (max-width: 799px) {
+  main {
+    max-width: 80%;
+  }
+}
+
+/* Responsive styles for larger screens (800px and above) */
+@media only screen and (min-width: 800px) {
+  main {
+    max-width: 60%;
+  }
+}
