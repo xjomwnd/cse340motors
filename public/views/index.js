@@ -1,38 +1,20 @@
-// Import necessary packages
+// Import necessary modules
 const express = require('express');
-const expressLayouts = require('express-ejs-layouts');
-const pg = require('pg');
-const dotenv = require('dotenv');
-
-// Load environment variables from .env file
-dotenv.config();
+const path = require('path');
 
 // Create an Express application
 const app = express();
+const port = 3000; // Choose any available port
 
-// Set the view engine to EJS
+// Set the view engine to use EJS
 app.set('view engine', 'ejs');
 
-// Use expressLayouts middleware
-app.use(expressLayouts);
-
-// Set the layout file for EJS (optional)
-app.set('layout', 'layouts/layout');
-
-// Define routes
+// Define a route to render the index.ejs file
 app.get('/', (req, res) => {
-  res.render('index', { title: 'PHP Motors' });
+  res.render('index'); // Assuming index.ejs is in the "views" folder
 });
-
-// Define a 404 route (optional)
-app.use((req, res) => {
-  res.status(404).render('404', { title: 'Page Not Found' });
-});
-
-// Define the port to listen on
-const port = process.env.PORT || 3000;
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on http://localhost:${port}`);
 });
