@@ -1,0 +1,15 @@
+/* public/css/large.css */
+
+/* Larger screen styles using media queries */
+@media only screen and (min-width: 800px) {
+    body {
+        background-color: #e6e6e6;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Add any other styles for larger screens here */
+}
