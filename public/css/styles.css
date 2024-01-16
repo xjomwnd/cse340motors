@@ -10,7 +10,7 @@
 }
 
 body {
-  background-image: url('img/checkerboard.jpg');
+  background-image: url("../images/site/checkerboard.jpg");
   background-repeat: repeat; /* I may change this to 'no-repeat' if I want the image to appear once */
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
