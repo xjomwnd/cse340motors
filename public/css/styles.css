@@ -85,3 +85,20 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+/* Mobile-first approach */
+@media only screen and (min-width: 600px) {
+  /* Add responsive styles for larger screens here */
+  body {
+      background-color: #f4f4f4;
+  }
+
+  main {
+      max-width: 800px;
+      margin: 0 auto;
+  }
+
+  footer {
+      position: relative;
+  }
+}
