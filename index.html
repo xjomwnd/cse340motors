@@ -1,51 +1,55 @@
-<!-- head.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<body>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSE Motors</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/medium.css" media="screen and (min-width: 600px) and (max-width: 799px)">
     <link rel="stylesheet" href="/css/large.css" media="screen and (min-width: 800px)">
     <!-- Add any other head elements here -->
 </head>
-<body>
-<div class="container header-container">
 <!-- header.ejs -->
-<header>
-    <img src="images/site/ic" alt="CSE Motors">
-    <p><strong>My Account</strong></p>
-    <!-- Add any other header elements or navigation links here -->
-    <%- include('partials/header') %>
-<!-- navigation.ejs -->
-<nav>
-    <!-- Add your navigation links here -->
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Custom</a></li>
-        <li><a href="#">sedan</a></li>
-        <li><a href="#">SUV</a></li>
-        <li><a href="#">Truck</a></li>
-    </ul>
-</nav>
-</header>
-</div>
-<div class="main">
 
+<header>
+    <h1>CSE Motors</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Cars</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <!-- Add any other navigation links here -->
+    </nav>
+</header>
 <!-- index.ejs -->
-<h1>Welcome to CSE Motors!</h1>
+
+<%- include('partials/head') %>
+
+<body>
+    <%- include('partials/header') %>
+
     <main>
-        <!-- Add your content for the home view here -->
+        <section id="hero">
+            <h2>Welcome to CSE Motors</h2>
+            <p>Explore our latest collection of cars.</p>
+            <!-- Add any other content for the hero section here -->
+        </section>
+
+        <section id="featured-cars">
+            <h3>Featured Cars</h3>
+            <!-- Add content for featured cars here -->
+        </section>
+
+        <!-- Add more sections and content as needed -->
+
     </main>
-</div>
- <%- include('partials/footer') %>
+
+    <%- include('partials/footer') %>
+</body>
 <!-- footer.ejs -->
+
 <footer>
     <p>&copy; 2024 CSE Motors. All rights reserved.</p>
     <!-- Add any other footer elements here -->
 </footer>
-</body>
 </html>
